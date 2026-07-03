@@ -1,0 +1,234 @@
+.burger,
+.close-nav {
+  display: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+#more {
+  display: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.svg {
+  fill: white;
+  height: 32px;
+  width: 32px;
+}
+
+.nav-list {
+  display: none;
+}
+
+.transparent {
+  background-color: transparent;
+  border: none;
+}
+
+header {
+  background-color: #202029;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+header .left {
+  gap: 50px;
+  align-items: center;
+}
+header .left .name .mobile {
+  display: none;
+}
+header .left .name .desktop {
+  display: flex;
+}
+header .left .links {
+  gap: 30px;
+}
+header .left .links a {
+  color: white;
+  text-decoration: none;
+}
+header .right {
+  gap: 20px;
+}
+header .right .sign {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: #38383a;
+}
+header .right .sign span {
+  color: white;
+}
+header .right .play {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgb(230, 177, 81);
+}
+
+main {
+  height: 100%;
+  background-color: #0d0d22;
+}
+main .gameplay-intro {
+  height: 100%;
+}
+main .gameplay-intro .transparent-text {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+}
+main .gameplay-intro .transparent-text .pitch {
+  text-align: center;
+}
+main .gameplay-intro .transparent-text .buttons .learn {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgb(220, 126, 63);
+}
+main .gameplay-intro .transparent-text .buttons .trailer {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+main .gameplay-intro .gameplay {
+  width: 60%;
+  height: 100%;
+}
+main .gameplay-intro .gameplay video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1279px) {
+  header .left {
+    gap: 10px;
+  }
+  header .left .name .desktop {
+    display: none;
+  }
+  header .left .name .mobile {
+    display: flex;
+  }
+}
+@media (max-width: 1067px) {
+  header {
+    position: relative;
+  }
+  header .right {
+    display: none;
+  }
+  header .burger {
+    display: block;
+    font-size: 32px;
+    color: white;
+  }
+  header .left .name .mobile {
+    display: none;
+  }
+  header .left .name .desktop {
+    display: flex;
+  }
+  header .left .links {
+    display: none;
+  }
+  header .left .links.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: #101014;
+    z-index: 1;
+  }
+  header .left .links.active .menu-header {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 30px;
+    border-bottom: 1px solid gray;
+  }
+  header .left .links.active .menu-header .burger-up {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  header .left .links.active .menu-header .burger-up img {
+    max-height: 36px;
+    height: auto;
+  }
+  header .left .links.active .menu-header .burger-down {
+    min-width: 100%;
+    justify-content: space-between;
+  }
+  header .left .links.active .menu-header .burger-down .burger-right,
+  header .left .links.active .menu-header .burger-down .burger-left {
+    align-items: center;
+    gap: 10px;
+  }
+  header .left .links.active .menu-header .burger-down .burger-right span,
+  header .left .links.active .menu-header .burger-down .burger-left span {
+    height: 24px;
+    width: 24px;
+  }
+  header .left .links.active .menu-header .burger-down .burger-right span svg,
+  header .left .links.active .menu-header .burger-down .burger-left span svg {
+    fill: white;
+  }
+  header .left .links.active .menu-header .burger-down .sign {
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: #38383a;
+  }
+  header .left .links.active .menu-header .burger-down .sign span {
+    color: white;
+  }
+  header .left .links.active .menu-header .close-nav {
+    display: block;
+    font-size: 32px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  header .left .links.active .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding: 50px 30px;
+  }
+  header .left .links.active .menu-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  header .left .links.active .menu-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+  }
+  header .left .links.active .menu-footer .play {
+    border: 1px solid;
+    border-radius: 15px;
+    padding: 10px;
+    background-color: rgb(230, 177, 81);
+  }
+}/*# sourceMappingURL=style.css.map */

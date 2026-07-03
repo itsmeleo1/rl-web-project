@@ -1,0 +1,246 @@
+@mixin link {
+  color: white;
+  text-decoration: none;
+}
+@mixin button-style {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+}
+.burger,
+.close-nav {
+  display: none;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+#more {
+  display: none;
+}
+.flex {
+  display: flex;
+}
+.svg {
+  fill: white;
+  height: 32px;
+  width: 32px;
+}
+.nav-list {
+  display: none;
+}
+.transparent {
+  background-color: transparent;
+  border: none;
+}
+header {
+  background-color: #202029;
+  padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+  .left {
+    gap: 50px;
+    align-items: center;
+    .name {
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        display: flex;
+      }
+    }
+    .links {
+      gap: 30px;
+      a {
+        @include link();
+      }
+    }
+  }
+  .right {
+    gap: 20px;
+    .sign {
+      @include button-style();
+      background-color: #38383a;
+
+      span {
+        color: white;
+      }
+    }
+    .play {
+      @include button-style();
+      background-color: rgb(230, 177, 81);
+    }
+  }
+}
+main {
+  height: 100%;
+  background-color: #0d0d22;
+  .gameplay-intro {
+    height: 100%;
+    .transparent-text {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 40%;
+      height: 100%;
+      .pitch {
+        text-align: center;
+      }
+      .buttons {
+        .learn {
+          @include button-style();
+          background-color: rgb(220, 126, 63);
+        }
+        .trailer {
+          @include button-style();
+          background-color: rgba($color: #ffffff, $alpha: 0.8);
+        }
+      }
+    }
+    .gameplay {
+      width: 60%;
+      height: 100%;
+      video {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media (max-width: 1279px) {
+  header {
+    .left {
+      gap: 10px;
+      .name {
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1067px) {
+  header {
+    position: relative;
+
+    .right {
+      display: none;
+    }
+
+    .burger {
+      display: block;
+      font-size: 32px;
+      color: white;
+    }
+
+    .left {
+      .name {
+        .mobile {
+          display: none;
+        }
+
+        .desktop {
+          display: flex;
+        }
+      }
+
+      .links {
+        display: none;
+      }
+
+      .links.active {
+        display: flex;
+        flex-direction: column;
+
+        position: fixed;
+        inset: 0;
+
+        background: #101014;
+        z-index: 1;
+
+        .menu-header {
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: column;
+          padding: 20px 30px;
+          gap: 30px;
+          border-bottom: 1px solid gray;
+          .burger-up {
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            img {
+              max-height: 36px;
+              height: auto;
+            }
+          }
+          .burger-down {
+            min-width: 100%;
+            justify-content: space-between;
+            .burger-right,
+            .burger-left {
+              align-items: center;
+              gap: 10px;
+              span {
+                height: 24px;
+                width: 24px;
+                svg {
+                  fill: white;
+                }
+              }
+            }
+            .sign {
+              @include button-style();
+              background-color: #38383a;
+
+              span {
+                color: white;
+              }
+            }
+          }
+          .close-nav {
+            display: block;
+            font-size: 32px;
+            color: white;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+          }
+        }
+
+        .menu-links {
+          display: flex;
+          flex-direction: column;
+          gap: 70px;
+          padding: 50px 30px;
+
+          a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 600;
+          }
+        }
+
+        .menu-footer {
+          margin-top: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          padding: 30px;
+
+          .play {
+            @include button-style();
+            background-color: rgb(230, 177, 81);
+          }
+        }
+      }
+    }
+  }
+}
