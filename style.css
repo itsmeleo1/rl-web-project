@@ -48,6 +48,18 @@ header .left .name .desktop {
   display: flex;
 }
 header .left .links {
+  display: flex;
+  gap: 30px;
+}
+header .left .links .menu-header {
+  display: none;
+}
+header .left .links .menu-footer {
+  display: none;
+}
+header .left .links .menu-links {
+  display: flex;
+  flex-direction: row;
   gap: 30px;
 }
 header .left .links a {
@@ -135,7 +147,6 @@ main .gameplay-intro .gameplay video {
      object-fit: cover;
 }
 main .News {
-  height: 1500px;
   flex-direction: column;
   gap: 10px;
   padding: 30px;
@@ -187,7 +198,192 @@ main .News .news-group .under-pic h4 {
   color: white;
   line-height: 1;
 }
+main .info {
+  flex-direction: column;
+  padding: 80px;
+}
+main .info .info1,
+main .info .info2,
+main .info .info3 {
+  margin: 60px 0;
+  align-items: center;
+  gap: 25px;
+}
+main .info .info1 .info-text,
+main .info .info2 .info-text,
+main .info .info3 .info-text {
+  flex-direction: column;
+  gap: 30px;
+  width: 40%;
+}
+main .info .info1 .info-text p,
+main .info .info2 .info-text p,
+main .info .info3 .info-text p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  text-align: start;
+}
+main .info .info1 .info-text h2,
+main .info .info2 .info-text h2,
+main .info .info3 .info-text h2 {
+  color: white;
+  font-size: 40px;
+}
+main .info .info1 .info-text .learn,
+main .info .info2 .info-text .learn,
+main .info .info3 .info-text .learn {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 160px;
+  width: 160px;
+  background-color: rgb(220, 126, 63);
+  padding: 15px;
+}
+main .info .info1 .info-text .sign,
+main .info .info2 .info-text .sign,
+main .info .info3 .info-text .sign {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 160px;
+  width: 160px;
+  background-color: rgb(220, 126, 63);
+  padding: 15px;
+}
+main .info .info1 .info-pic,
+main .info .info2 .info-pic,
+main .info .info3 .info-pic {
+  width: 60%;
+}
+main .info .info2 {
+  flex-direction: row-reverse;
+}
+main .info .info-headline {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 9px;
+}
+main .info .info-headline h1 {
+  color: white;
+  font-size: 40px;
+}
+main .info .info-headline p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  max-width: 1050px;
+}
 
+footer {
+  justify-content: space-between;
+  flex-direction: column;
+  background: #1b1b20;
+  color: white;
+  padding: 60px;
+  gap: 70px;
+}
+footer section .footer-top {
+  justify-content: space-between;
+}
+footer section .footer-top .socials {
+  gap: 20px;
+}
+footer section .footer-top .socials a span svg {
+  fill: white;
+  height: 24px;
+  width: 24px;
+}
+footer .footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+footer .footer-links .footer-main,
+footer .footer-links .footer-support {
+  flex-direction: column;
+  gap: 15px;
+  justify-content: flex-start;
+}
+footer .footer-links .footer-main a,
+footer .footer-links .footer-support a {
+  text-decoration: none;
+  color: gray;
+}
+footer .footer-links .footer-main h3,
+footer .footer-links .footer-support h3 {
+  color: white;
+  font-size: 30px;
+}
+footer .footer-platforms {
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+}
+footer .footer-platforms .platform-icons {
+  gap: 10px;
+}
+footer .footer-platforms .platform-icons a {
+  display: block;
+  height: 24px;
+  width: 24px;
+}
+footer .footer-platforms .platform-icons a img {
+  display: block;
+  fill: white;
+}
+footer .footer-platforms .platform-icons a svg {
+  height: 24px;
+  width: 24px;
+  fill: white;
+}
+footer .footer-platforms .platform-icons a #xseries,
+footer .footer-platforms .platform-icons a #ps5,
+footer .footer-platforms .platform-icons a #ps4,
+footer .footer-platforms .platform-icons a #xbox {
+  height: 56px;
+  width: 24px;
+}
+footer .footer-platforms .platform-icons a #xseries img,
+footer .footer-platforms .platform-icons a #ps5 img,
+footer .footer-platforms .platform-icons a #ps4 img,
+footer .footer-platforms .platform-icons a #xbox img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding: 40px 24px;
+  }
+  .footer-top,
+  .footer-platforms,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  .rating img {
+    width: 240px;
+  }
+  .legal-links {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 1279px) {
   header .left {
     gap: 10px;
@@ -209,7 +405,7 @@ main .News .news-group .under-pic h4 {
     display: none;
   }
 }
-@media (max-width: 1067px) {
+@media (max-width: 1180px) {
   header {
     position: relative;
   }
@@ -329,6 +525,21 @@ main .News .news-group .under-pic h4 {
   main .gameplay-intro .transparent-text {
     width: 60%;
   }
+  main .info .info1,
+  main .info .info2,
+  main .info .info3 {
+    flex-direction: column-reverse;
+  }
+  main .info .info1 .info-text,
+  main .info .info2 .info-text,
+  main .info .info3 .info-text {
+    width: 100%;
+  }
+  main .info .info1 .info-pic,
+  main .info .info2 .info-pic,
+  main .info .info3 .info-pic {
+    width: 100%;
+  }
 }
 @media (max-width: 837px) {
   main .News .news-group {
@@ -341,6 +552,11 @@ main .News .news-group .under-pic h4 {
   }
   main .News .news-group .news2 {
     display: none;
+  }
+}
+@media (max-width: 678px) {
+  #info-headline {
+    text-align: center;
   }
 }
 @media (max-width: 359px) {

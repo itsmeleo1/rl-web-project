@@ -32,9 +32,8 @@ ol[role="list"] {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  line-height: 0;
+  line-height: 1;
 }
-
 
 /* Balance text wrapping on headings */
 h1,
