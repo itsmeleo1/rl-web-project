@@ -137,7 +137,6 @@ main .gameplay-intro .transparent-text .buttons .trailer {
 main .gameplay-intro .gameplay {
   width: 60%;
   height: 100%;
-  padding: 0;
 }
 main .gameplay-intro .gameplay video {
   display: block;
@@ -373,17 +372,38 @@ footer .footer-platforms .platform-icons a #xbox img {
     align-items: flex-start;
     gap: 30px;
   }
-  .footer-links {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-  .rating img {
-    width: 240px;
-  }
-  .legal-links {
-    flex-wrap: wrap;
-  }
 }
+.footer-bottom {
+  justify-content: space-between;
+}
+.footer-bottom .legal {
+  flex-direction: column;
+  gap: 30px;
+}
+.footer-bottom .legal p {
+  color: gray;
+}
+.footer-bottom .legal .legal-links {
+  flex-wrap: wrap;
+}
+.footer-bottom .legal .legal-links a {
+  color: white;
+  text-decoration: none;
+  color: gray;
+  margin: 10px;
+}
+.footer-bottom .back-top {
+  border: 1px solid;
+  border-radius: 15px;
+  padding: 10px;
+  min-width: 160px;
+  background: gray;
+}
+.footer-bottom .back-top span a {
+  color: white;
+  text-decoration: none;
+}
+
 @media (max-width: 1279px) {
   header .left {
     gap: 10px;
@@ -480,6 +500,8 @@ footer .footer-platforms .platform-icons a #xbox img {
     color: white;
   }
   header .left .links.active .menu-header .close-nav {
+    position: relative;
+    z-index: 2;
     display: block;
     font-size: 32px;
     color: white;
