@@ -259,9 +259,9 @@ footer {
   flex-direction: column;
   background: #1b1b20;
   color: white;
-  padding: 60px;
+  padding: 40px;
   gap: 70px;
-  section {
+  .footer-head {
     .footer-top {
       justify-content: space-between;
       .socials {
@@ -300,8 +300,6 @@ footer {
         font-size: 30px;
       }
     }
-    .footer-support {
-    }
   }
   .footer-platforms {
     align-items: center;
@@ -337,48 +335,42 @@ footer {
       }
     }
   }
-}
-
-@media (max-width: 900px) {
-  .footer {
-    padding: 40px 24px;
-  }
-
-  .footer-top,
-  .footer-platforms,
   .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-  }
-}
-.footer-bottom {
-  justify-content: space-between;
-  .legal {
-    flex-direction: column;
-    gap: 30px;
-    p {
-      color: gray;
-    }
-    .legal-links {
+    justify-content: space-between;
+    .legal {
+      flex-direction: column;
+      gap: 20px;
       flex-wrap: wrap;
-      a {
-        @include link();
+      p {
+        max-width: 700px;
+        width: auto;
         color: gray;
-        margin: 10px;
+      }
+      .legal-links {
+        flex-wrap: wrap;
+        a {
+          @include link();
+        }
+        gap: 15px;
       }
     }
-  }
-  .back-top {
-    @include button-style();
-    background: gray;
-    span {
-      a {
-        @include link();
+    .back-top {
+      background-color: #38383a;
+      border: none;
+      border-radius: 15px;
+      padding: 15px;
+      span {
+        color: white;
+        a {
+          @include link();
+          color: gray;
+          margin: 10px;
+        }
       }
     }
   }
 }
+
 @media (max-width: 1279px) {
   header {
     .left {
@@ -541,7 +533,11 @@ footer {
         width: 60%;
       }
     }
+    .news {
+      padding: 20px;
+    }
     .info {
+      padding: 20px;
       .info1,
       .info2,
       .info3 {
@@ -553,6 +549,24 @@ footer {
           width: 100%;
         }
       }
+    }
+  }
+}
+@media (max-width: 900px) {
+  footer {
+    padding: 20px;
+  }
+
+  .footer-top,
+  .footer-platforms,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .footer-bottom {
+    justify-content: space-between;
+    .legal {
     }
   }
 }

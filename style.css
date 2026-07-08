@@ -284,16 +284,16 @@ footer {
   flex-direction: column;
   background: #1b1b20;
   color: white;
-  padding: 60px;
+  padding: 40px;
   gap: 70px;
 }
-footer section .footer-top {
+footer .footer-head .footer-top {
   justify-content: space-between;
 }
-footer section .footer-top .socials {
+footer .footer-head .footer-top .socials {
   gap: 20px;
 }
-footer section .footer-top .socials a span svg {
+footer .footer-head .footer-top .socials a span svg {
   fill: white;
   height: 24px;
   width: 24px;
@@ -360,48 +360,43 @@ footer .footer-platforms .platform-icons a #xbox img {
   height: 100%;
   width: 100%;
 }
-
-@media (max-width: 900px) {
-  .footer {
-    padding: 40px 24px;
-  }
-  .footer-top,
-  .footer-platforms,
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-  }
-}
-.footer-bottom {
+footer .footer-bottom {
   justify-content: space-between;
 }
-.footer-bottom .legal {
+footer .footer-bottom .legal {
   flex-direction: column;
-  gap: 30px;
-}
-.footer-bottom .legal p {
-  color: gray;
-}
-.footer-bottom .legal .legal-links {
+  gap: 20px;
   flex-wrap: wrap;
 }
-.footer-bottom .legal .legal-links a {
+footer .footer-bottom .legal p {
+  max-width: 700px;
+  width: auto;
+  color: gray;
+}
+footer .footer-bottom .legal .legal-links {
+  flex-wrap: wrap;
+}
+footer .footer-bottom .legal .legal-links a {
+  color: white;
+  text-decoration: none;
+}
+footer .footer-bottom .legal .legal-links {
+  gap: 15px;
+}
+footer .footer-bottom .back-top {
+  background-color: #38383a;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+}
+footer .footer-bottom .back-top span {
+  color: white;
+}
+footer .footer-bottom .back-top span a {
   color: white;
   text-decoration: none;
   color: gray;
   margin: 10px;
-}
-.footer-bottom .back-top {
-  border: 1px solid;
-  border-radius: 15px;
-  padding: 10px;
-  min-width: 160px;
-  background: gray;
-}
-.footer-bottom .back-top span a {
-  color: white;
-  text-decoration: none;
 }
 
 @media (max-width: 1279px) {
@@ -547,6 +542,12 @@ footer .footer-platforms .platform-icons a #xbox img {
   main .gameplay-intro .transparent-text {
     width: 60%;
   }
+  main .news {
+    padding: 20px;
+  }
+  main .info {
+    padding: 20px;
+  }
   main .info .info1,
   main .info .info2,
   main .info .info3 {
@@ -561,6 +562,21 @@ footer .footer-platforms .platform-icons a #xbox img {
   main .info .info2 .info-pic,
   main .info .info3 .info-pic {
     width: 100%;
+  }
+}
+@media (max-width: 900px) {
+  footer {
+    padding: 20px;
+  }
+  .footer-top,
+  .footer-platforms,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .footer-bottom {
+    justify-content: space-between;
   }
 }
 @media (max-width: 837px) {
