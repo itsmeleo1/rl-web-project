@@ -1,0 +1,120 @@
+.flex {
+  display: flex;
+}
+
+body {
+  background-color: #0a0a0f;
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+
+  .registration {
+    flex-direction: column;
+    gap: 20px;
+    background-color: #17171f;
+    border-radius: 12px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    h1 {
+      color: white;
+      font-size: 26px;
+    }
+    .back-link {
+      align-items: center;
+      gap: 6px;
+      color: white;
+      font-size: 15px;
+      text-decoration: none;
+      width: fit-content;
+      svg {
+        fill: white;
+      }
+    }
+    form {
+      flex-direction: column;
+      gap: 20px;
+      .field {
+        .check-icon {
+          position: absolute;
+          right: 44px;
+          color: #2ecc71;
+        }
+        flex-direction: column;
+        gap: 8px;
+        label {
+          color: gray;
+          font-size: 14px;
+        }
+        input {
+          background-color: #17171f;
+          border: 1px solid #3a3a4a;
+          border-radius: 6px;
+          padding: 14px;
+          color: white;
+          font-size: 15px;
+          width: 100%;
+        }
+        .password-wrap {
+          position: relative;
+          align-items: center;
+          input {
+            flex: 1;
+          }
+        }
+        .continue-btn {
+          background-color: #4fc3f7;
+          border: none;
+          border-radius: 6px;
+          padding: 14px;
+          color: #0d0d22;
+          font-size: 15px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
+      .checkboxes {
+        align-items: flex-start;
+        gap: 10px;
+        color: white;
+        font-size: 14px;
+        .optional {
+          color: gray;
+        }
+      }
+    }
+    .name-fields {
+      gap: 15px;
+      field {
+        flex: 1;
+      }
+    }
+    .privacy-link {
+      color: #4fc3f7;
+      font-size: 14px;
+      text-decoration: underline;
+      text-align: center;
+    }
+    .label {
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+  }
+
+  .registration {
+    padding: 24px;
+  }
+
+  .name-fields {
+    flex-direction: column;
+  }
+}

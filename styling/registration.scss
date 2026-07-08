@@ -1,0 +1,228 @@
+@import url(./style.css);
+@mixin backgroundcolor-main {
+  background-color: rgb(16, 16, 21);
+}
+@mixin backgroundcolor-form {
+  background-color: rgb(24, 24, 28);
+}
+main {
+  @include backgroundcolor-main();
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+  .login-card {
+    @include backgroundcolor-form();
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 560px;
+
+    hr {
+      width: 100%;
+      border: none;
+      border-top: 1px solid #333;
+    }
+
+    .login-header {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      img {
+        height: 32px;
+      }
+
+      h1 {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+
+    .login-form {
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+
+      input {
+        background-color: #232332;
+        border: 1px solid #3a3a4a;
+        border-radius: 6px;
+        padding: 14px;
+        color: white;
+        font-size: 15px;
+        width: 100%;
+
+        &::placeholder {
+          color: gray;
+        }
+      }
+
+      .continue-btn {
+        background-color: #4fc3f7;
+        border: none;
+        border-radius: 6px;
+        padding: 14px;
+        color: #0d0d22;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+
+    .signup-text {
+      color: white;
+      font-size: 14px;
+      text-align: center;
+
+      a {
+        color: #4fc3f7;
+        text-decoration: underline;
+      }
+    }
+
+    .console-section,
+    .other-signin {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
+
+      h2 {
+        color: white;
+        font-size: 17px;
+        text-align: center;
+      }
+
+      p {
+        color: gray;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+
+    .console-options,
+    .signin-options {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .console-option,
+    .signin-option {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #232332;
+      border: 1px solid #3a3a4a;
+      border-radius: 8px;
+      padding: 15px;
+      width: 130px;
+      cursor: pointer;
+
+      img {
+        height: 28px;
+        width: 28px;
+      }
+
+      span {
+        color: white;
+        font-size: 13px;
+        text-align: center;
+      }
+    }
+
+    .trouble-link,
+    .privacy-link {
+      color: #4fc3f7;
+      font-size: 14px;
+      text-decoration: underline;
+      text-align: center;
+    }
+  }
+}
+// PlayStation
+.mui-9uy14h {
+  background-color: #006fcd;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+// Xbox
+.mui-1t9pz9x {
+  color: white;
+  background-color: #107c10;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+// Nintendo
+.mui-140m94z {
+  color: white;
+  background-color: #e60012;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+// Google
+.mui-e8z6o0 {
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+// Steam
+.mui-1hsm8ow {
+  color: white;
+  background-color: #1877f2;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+// Apple
+.mui-ie1wik {
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+// Facebook
+.mui-fa50i3 {
+  color: white;
+  background-color: #1877f2;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+// LEGO
+.mui-653txw {
+  border-radius: 6px;
+}
+@media (max-width: 600px) {
+  .login-page {
+    padding: 20px;
+  }
+
+  .login-card {
+    padding: 24px;
+  }
+
+  .console-option,
+  .signin-option {
+    width: 100px;
+    padding: 10px;
+  }
+}

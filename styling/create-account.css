@@ -1,0 +1,119 @@
+.flex {
+  display: flex;
+}
+
+body {
+  background-color: #0a0a0f;
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+main .registration {
+  flex-direction: column;
+  gap: 20px;
+  background-color: #17171f;
+  border-radius: 12px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+}
+main .registration h1 {
+  color: white;
+  font-size: 26px;
+}
+main .registration .back-link {
+  align-items: center;
+  gap: 6px;
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .registration .back-link svg {
+  fill: white;
+}
+main .registration form {
+  flex-direction: column;
+  gap: 20px;
+}
+main .registration form .field .check-icon {
+  position: absolute;
+  right: 44px;
+  color: #2ecc71;
+}
+main .registration form .field {
+  flex-direction: column;
+  gap: 8px;
+}
+main .registration form .field label {
+  color: gray;
+  font-size: 14px;
+}
+main .registration form .field input {
+  background-color: #17171f;
+  border: 1px solid #3a3a4a;
+  border-radius: 6px;
+  padding: 14px;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+}
+main .registration form .field .password-wrap {
+  position: relative;
+  align-items: center;
+}
+main .registration form .field .password-wrap input {
+  flex: 1;
+}
+main .registration form .field .continue-btn {
+  background-color: #4fc3f7;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  color: #0d0d22;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+main .registration form .checkboxes {
+  align-items: flex-start;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+}
+main .registration form .checkboxes .optional {
+  color: gray;
+}
+main .registration .name-fields {
+  gap: 15px;
+}
+main .registration .name-fields field {
+  flex: 1;
+}
+main .registration .privacy-link {
+  color: #4fc3f7;
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: center;
+}
+main .registration .label {
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 20px;
+  }
+  .registration {
+    padding: 24px;
+  }
+  .name-fields {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=create-account.css.map */

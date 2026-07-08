@@ -1,0 +1,207 @@
+@import url(./style.css);
+main {
+  background-color: rgb(16, 16, 21);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+}
+main .login-card {
+  background-color: rgb(24, 24, 28);
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  width: 100%;
+  max-width: 560px;
+}
+main .login-card hr {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #333;
+}
+main .login-card .login-header {
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+main .login-card .login-header img {
+  height: 32px;
+}
+main .login-card .login-header h1 {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+}
+main .login-card .login-form {
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+main .login-card .login-form input {
+  background-color: #232332;
+  border: 1px solid #3a3a4a;
+  border-radius: 6px;
+  padding: 14px;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+}
+main .login-card .login-form input::-moz-placeholder {
+  color: gray;
+}
+main .login-card .login-form input::placeholder {
+  color: gray;
+}
+main .login-card .login-form .continue-btn {
+  background-color: #4fc3f7;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  color: #0d0d22;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+main .login-card .signup-text {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+main .login-card .signup-text a {
+  color: #4fc3f7;
+  text-decoration: underline;
+}
+main .login-card .console-section,
+main .login-card .other-signin {
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+main .login-card .console-section h2,
+main .login-card .other-signin h2 {
+  color: white;
+  font-size: 17px;
+  text-align: center;
+}
+main .login-card .console-section p,
+main .login-card .other-signin p {
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+}
+main .login-card .console-options,
+main .login-card .signin-options {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+  width: 100%;
+}
+main .login-card .console-option,
+main .login-card .signin-option {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #232332;
+  border: 1px solid #3a3a4a;
+  border-radius: 8px;
+  padding: 15px;
+  width: 130px;
+  cursor: pointer;
+}
+main .login-card .console-option img,
+main .login-card .signin-option img {
+  height: 28px;
+  width: 28px;
+}
+main .login-card .console-option span,
+main .login-card .signin-option span {
+  color: white;
+  font-size: 13px;
+  text-align: center;
+}
+main .login-card .trouble-link,
+main .login-card .privacy-link {
+  color: #4fc3f7;
+  font-size: 14px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.mui-9uy14h {
+  background-color: #006fcd;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+.mui-1t9pz9x {
+  color: white;
+  background-color: #107c10;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+.mui-140m94z {
+  color: white;
+  background-color: #e60012;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+.mui-e8z6o0 {
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+.mui-1hsm8ow {
+  color: white;
+  background-color: #1877f2;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+.mui-ie1wik {
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+.mui-fa50i3 {
+  color: white;
+  background-color: #1877f2;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: content-box;
+}
+
+.mui-653txw {
+  border-radius: 6px;
+}
+
+@media (max-width: 600px) {
+  .login-page {
+    padding: 20px;
+  }
+  .login-card {
+    padding: 24px;
+  }
+  .console-option,
+  .signin-option {
+    width: 100px;
+    padding: 10px;
+  }
+}/*# sourceMappingURL=registration.css.map */
