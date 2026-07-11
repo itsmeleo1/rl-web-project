@@ -1,4 +1,7 @@
 @import url(./style.css);
+body {
+  font-family: inter;
+}
 @mixin backgroundcolor-main {
   background-color: rgb(16, 16, 21);
 }
@@ -73,6 +76,10 @@ main {
         font-size: 15px;
         font-weight: 600;
         cursor: pointer;
+        &:hover {
+          outline: 2px solid white;
+          outline-offset: 2px;
+        }
       }
     }
 

@@ -1,9 +1,11 @@
+@import url(./registration.scss);
 .flex {
   display: flex;
 }
 
 body {
   background-color: #0a0a0f;
+  font-family: inter;
 }
 
 main {
@@ -11,7 +13,6 @@ main {
   align-items: center;
   min-height: 100vh;
   padding: 50px;
-
   .registration {
     flex-direction: column;
     gap: 20px;
@@ -38,6 +39,20 @@ main {
     form {
       flex-direction: column;
       gap: 20px;
+      .continue-btn {
+        background-color: #4fc3f7;
+        border: 3px solid transparent;
+        border-radius: 6px;
+        padding: 14px;
+        color: #0d0d22;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        &:hover {
+          outline: 2px solid white;
+          outline-offset: 2px;
+        }
+      }
       .field {
         .check-icon {
           position: absolute;
@@ -65,16 +80,6 @@ main {
           input {
             flex: 1;
           }
-        }
-        .continue-btn {
-          background-color: #4fc3f7;
-          border: none;
-          border-radius: 6px;
-          padding: 14px;
-          color: #0d0d22;
-          font-size: 15px;
-          font-weight: 600;
-          cursor: pointer;
         }
       }
       .checkboxes {

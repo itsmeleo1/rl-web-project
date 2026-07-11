@@ -1,3 +1,19 @@
+@font-face {
+  font-family: bourgeois;
+  src: url(./fonts/Bourgeois\b old.otf);
+}
+@font-face {
+  font-family: inter;
+  src: url(./fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: inter-bold;
+  src: url(./fonts/Inter_28pt-Bold.ttf);
+}
+body {
+  font-family: bourgeois;
+}
+
 .burger,
 .close-nav {
   display: none;
@@ -21,6 +37,10 @@
   height: 32px;
   width: 32px;
 }
+.svg:hover {
+  fill: gray;
+  cursor: pointer;
+}
 
 .nav-list {
   display: none;
@@ -41,50 +61,69 @@ header .left {
   gap: 50px;
   align-items: center;
 }
-header .left .name .mobile {
+header .left .epiclist a button {
+  cursor: pointer;
+}
+header .name .mobile {
   display: none;
 }
-header .left .name .desktop {
+header .name .desktop {
   display: flex;
 }
-header .left .links {
+header .links {
   display: flex;
   gap: 30px;
 }
-header .left .links .menu-header {
+header .links .menu-header {
   display: none;
 }
-header .left .links .menu-footer {
+header .links .menu-footer {
   display: none;
 }
-header .left .links .menu-links {
+header .links .menu-links {
   display: flex;
   flex-direction: row;
   gap: 30px;
 }
-header .left .links a {
+header .links .menu-links a {
   color: white;
   text-decoration: none;
+  font-family: inter;
 }
-header .right {
+header .links .menu-links a:hover {
+  color: gray;
+}
+
+.right {
   gap: 20px;
 }
-header .right .sign {
-  border: 1px solid;
+.right .sign {
+  font-family: inter-bold;
+  border: 3px solid transparent;
   border-radius: 15px;
   padding: 10px;
   min-width: 160px;
+  cursor: pointer;
   background-color: #38383a;
+  transition: border-color 0.2 ease-in;
 }
-header .right .sign span {
+.right .sign:hover {
+  background-color: #565658;
+}
+.right .sign span {
   color: white;
 }
-header .right .play {
-  border: 1px solid;
+.right .play {
+  font-family: inter-bold;
+  border: 3px solid transparent;
   border-radius: 15px;
   padding: 10px;
   min-width: 160px;
+  cursor: pointer;
   background-color: rgb(230, 177, 81);
+}
+.right .play:hover {
+  background-color: rgb(182, 137, 53);
 }
 
 main {
@@ -119,20 +158,34 @@ main .gameplay-intro .transparent-text .buttons {
   gap: 10px;
 }
 main .gameplay-intro .transparent-text .buttons .learn {
-  border: 1px solid;
+  font-family: inter-bold;
+  border: 3px solid transparent;
   border-radius: 15px;
   padding: 10px;
   min-width: 160px;
+  cursor: pointer;
   background-color: rgb(220, 126, 63);
   padding: 15px;
 }
+main .gameplay-intro .transparent-text .buttons .learn:hover {
+  outline: 2px solid rgb(150, 147, 147);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
+}
 main .gameplay-intro .transparent-text .buttons .trailer {
-  border: 1px solid;
+  font-family: inter-bold;
+  border: 3px solid transparent;
   border-radius: 15px;
   padding: 10px;
   min-width: 160px;
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 15px;
+}
+main .gameplay-intro .transparent-text .buttons .trailer:hover {
+  outline: 2px solid rgb(150, 147, 147);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
 }
 main .gameplay-intro .gameplay {
   width: 60%;
@@ -164,10 +217,10 @@ main .News .news-group {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 20px;
-  grid-template-areas: "news news2 news3";
+  grid-template-areas: "news1 news2 news3";
 }
-main .News .news-group .news {
-  grid-area: news;
+main .News .news-group .news1 {
+  grid-area: news1;
 }
 main .News .news-group .news2 {
   grid-area: news2;
@@ -227,30 +280,49 @@ main .info .info3 .info-text p {
 main .info .info1 .info-text h2,
 main .info .info2 .info-text h2,
 main .info .info3 .info-text h2 {
+  font-family: inter;
   color: white;
   font-size: 40px;
 }
 main .info .info1 .info-text .learn,
 main .info .info2 .info-text .learn,
 main .info .info3 .info-text .learn {
-  border: 1px solid;
+  font-family: inter-bold;
+  border: 3px solid transparent;
   border-radius: 15px;
   padding: 10px;
   min-width: 160px;
+  cursor: pointer;
   width: 160px;
   background-color: rgb(220, 126, 63);
   padding: 15px;
 }
+main .info .info1 .info-text .learn:hover,
+main .info .info2 .info-text .learn:hover,
+main .info .info3 .info-text .learn:hover {
+  outline: 2px solid rgb(150, 147, 147);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
+}
 main .info .info1 .info-text .sign,
 main .info .info2 .info-text .sign,
 main .info .info3 .info-text .sign {
-  border: 1px solid;
+  font-family: inter-bold;
+  border: 3px solid transparent;
   border-radius: 15px;
   padding: 10px;
   min-width: 160px;
+  cursor: pointer;
   width: 160px;
   background-color: rgb(220, 126, 63);
   padding: 15px;
+}
+main .info .info1 .info-text .sign:hover,
+main .info .info2 .info-text .sign:hover,
+main .info .info3 .info-text .sign:hover {
+  outline: 2px solid rgb(150, 147, 147);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
 }
 main .info .info1 .info-pic,
 main .info .info2 .info-pic,
@@ -268,6 +340,7 @@ main .info .info-headline {
   gap: 9px;
 }
 main .info .info-headline h1 {
+  font-family: inter;
   color: white;
   font-size: 40px;
 }
@@ -293,6 +366,10 @@ footer .footer-head .footer-top {
 footer .footer-head .footer-top .socials {
   gap: 20px;
 }
+footer .footer-head .footer-top .socials a span svg:hover {
+  fill: gray;
+  cursor: pointer;
+}
 footer .footer-head .footer-top .socials a span svg {
   fill: white;
   height: 24px;
@@ -312,6 +389,14 @@ footer .footer-links .footer-support {
   flex-direction: column;
   gap: 15px;
   justify-content: flex-start;
+}
+footer .footer-links .footer-main a,
+footer .footer-links .footer-support a {
+  font-family: inter;
+}
+footer .footer-links .footer-main a:hover,
+footer .footer-links .footer-support a:hover {
+  color: white;
 }
 footer .footer-links .footer-main a,
 footer .footer-links .footer-support a {
@@ -339,6 +424,10 @@ footer .footer-platforms .platform-icons a {
 footer .footer-platforms .platform-icons a img {
   display: block;
   fill: white;
+}
+footer .footer-platforms .platform-icons a svg:hover {
+  fill: gray;
+  cursor: pointer;
 }
 footer .footer-platforms .platform-icons a svg {
   height: 24px;
@@ -379,6 +468,11 @@ footer .footer-bottom .legal .legal-links {
 footer .footer-bottom .legal .legal-links a {
   color: white;
   text-decoration: none;
+  font-family: inter;
+  color: gray;
+}
+footer .footer-bottom .legal .legal-links a:hover {
+  color: white;
 }
 footer .footer-bottom .legal .legal-links {
   gap: 15px;
@@ -395,8 +489,12 @@ footer .footer-bottom .back-top span {
 footer .footer-bottom .back-top span a {
   color: white;
   text-decoration: none;
+  font-family: inter;
   color: gray;
   margin: 10px;
+}
+footer .footer-bottom .back-top span a:hover {
+  color: white;
 }
 
 @media (max-width: 1279px) {
@@ -414,7 +512,7 @@ footer .footer-bottom .back-top span a {
   main .News .news-group {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "news news2";
+    grid-template-areas: "news1 news2";
   }
   main .News .news-group .news3 {
     display: none;
@@ -480,16 +578,28 @@ footer .footer-bottom .back-top span a {
     height: 24px;
     width: 24px;
   }
+  header .left .links.active .menu-header .burger-down .burger-right span svg:hover,
+  header .left .links.active .menu-header .burger-down .burger-left span svg:hover {
+    fill: gray;
+    cursor: pointer;
+  }
   header .left .links.active .menu-header .burger-down .burger-right span svg,
   header .left .links.active .menu-header .burger-down .burger-left span svg {
     fill: white;
   }
   header .left .links.active .menu-header .burger-down .sign {
-    border: 1px solid;
+    font-family: inter-bold;
+    border: 3px solid transparent;
     border-radius: 15px;
     padding: 10px;
     min-width: 160px;
+    cursor: pointer;
     background-color: #38383a;
+  }
+  header .left .links.active .menu-header .burger-down .sign:hover {
+    outline: 2px solid rgb(150, 147, 147);
+    outline-offset: 2px;
+    transition: outline-color 0.2s ease;
   }
   header .left .links.active .menu-header .burger-down .sign span {
     color: white;
@@ -524,10 +634,12 @@ footer .footer-bottom .back-top span a {
     padding: 30px;
   }
   header .left .links.active .menu-footer .play {
-    border: 1px solid;
+    font-family: inter-bold;
+    border: 3px solid transparent;
     border-radius: 15px;
     padding: 10px;
     min-width: 160px;
+    cursor: pointer;
     background-color: rgb(230, 177, 81);
   }
 }
@@ -541,9 +653,6 @@ footer .footer-bottom .back-top span a {
   }
   main .gameplay-intro .transparent-text {
     width: 60%;
-  }
-  main .news {
-    padding: 20px;
   }
   main .info {
     padding: 20px;
@@ -583,7 +692,7 @@ footer .footer-bottom .back-top span a {
   main .News .news-group {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    grid-template-areas: "news";
+    grid-template-areas: "news1";
   }
   main .News .news-group .news3 {
     display: none;

@@ -1,12 +1,30 @@
+@font-face {
+  font-family: bourgeois;
+  src: url(./fonts/Bourgeois\Bold.otf);
+}
+@font-face {
+  font-family: inter;
+  src: url(./fonts/Inter-VariableFont_opsz\,wght.ttf);
+}
+@font-face {
+  font-family: inter-bold;
+  src: url(./fonts/Inter_28pt-Bold.ttf);
+}
+body {
+  font-family: bourgeois;
+}
 @mixin link {
   color: white;
   text-decoration: none;
+  font-family: inter;
 }
 @mixin button-style {
-  border: 1px solid;
+  font-family: inter-bold;
+  border: 3px solid transparent;
   border-radius: 15px;
   padding: 10px;
   min-width: 160px;
+  cursor: pointer;
 }
 @mixin infop {
   color: white;
@@ -15,8 +33,27 @@
   text-align: center;
 }
 @mixin infoh {
+  font-family: inter;
   color: white;
   font-size: 40px;
+}
+@mixin borderhover {
+  &:hover {
+    outline: 2px solid rgb(150, 147, 147);
+    outline-offset: 2px;
+    transition: outline-color 0.2s ease;
+  }
+}
+@mixin link-hover {
+  &:hover {
+    color: white;
+  }
+}
+@mixin svg-hover {
+  &:hover {
+    fill: gray;
+    cursor: pointer;
+  }
 }
 .burger,
 .close-nav {
@@ -37,6 +74,7 @@
   fill: white;
   height: 32px;
   width: 32px;
+  @include svg-hover();
 }
 .nav-list {
   display: none;
@@ -53,46 +91,62 @@ header {
   .left {
     gap: 50px;
     align-items: center;
-    .name {
-      .mobile {
-        display: none;
-      }
-      .desktop {
-        display: flex;
-      }
-    }
-    .links {
-      display: flex;
-      gap: 30px;
-      .menu-header {
-        display: none;
-      }
-      .menu-footer {
-        display: none;
-      }
-      .menu-links {
-        display: flex;
-        flex-direction: row;
-        gap: 30px;
-      }
+    .epiclist {
       a {
-        @include link();
+        button {
+          cursor: pointer;
+        }
       }
     }
   }
-  .right {
-    gap: 20px;
-    .sign {
-      @include button-style();
-      background-color: #38383a;
-
-      span {
-        color: white;
+  .name {
+    .mobile {
+      display: none;
+    }
+    .desktop {
+      display: flex;
+    }
+  }
+  .links {
+    display: flex;
+    gap: 30px;
+    .menu-header {
+      display: none;
+    }
+    .menu-footer {
+      display: none;
+    }
+    .menu-links {
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      a {
+        @include link();
+        &:hover {
+          color: gray;
+        }
       }
     }
-    .play {
-      @include button-style();
-      background-color: rgb(230, 177, 81);
+  }
+}
+.right {
+  gap: 20px;
+  .sign {
+    @include button-style();
+    background-color: #38383a;
+    transition: border-color 0.2 ease-in;
+    &:hover {
+      background-color: #565658;
+    }
+    span {
+      color: white;
+    }
+  }
+  .play {
+    @include button-style();
+    background-color: rgb(230, 177, 81);
+    &:hover {
+      background-color: rgb(182, 137, 53);
     }
   }
 }
@@ -127,11 +181,13 @@ main {
           @include button-style();
           background-color: rgb(220, 126, 63);
           padding: 15px;
+          @include borderhover();
         }
         .trailer {
           @include button-style();
           background-color: rgba($color: #ffffff, $alpha: 0.8);
           padding: 15px;
+          @include borderhover();
         }
       }
     }
@@ -164,9 +220,9 @@ main {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: 1fr;
       gap: 20px;
-      grid-template-areas: "news news2 news3";
-      .news {
-        grid-area: news;
+      grid-template-areas: "news1 news2 news3";
+      .news1 {
+        grid-area: news1;
       }
       .news2 {
         grid-area: news2;
@@ -223,12 +279,14 @@ main {
           width: 160px;
           background-color: rgb(220, 126, 63);
           padding: 15px;
+          @include borderhover();
         }
         .sign {
           @include button-style();
           width: 160px;
           background-color: rgb(220, 126, 63);
           padding: 15px;
+          @include borderhover();
         }
       }
       .info-pic {
@@ -269,6 +327,7 @@ footer {
         a {
           span {
             svg {
+              @include svg-hover();
               fill: white;
               height: 24px;
               width: 24px;
@@ -292,6 +351,8 @@ footer {
       gap: 15px;
       justify-content: flex-start;
       a {
+        font-family: inter;
+        @include link-hover();
         text-decoration: none;
         color: gray;
       }
@@ -316,6 +377,7 @@ footer {
           fill: white;
         }
         svg {
+          @include svg-hover();
           height: 24px;
           width: 24px;
           fill: white;
@@ -350,6 +412,8 @@ footer {
         flex-wrap: wrap;
         a {
           @include link();
+          color: gray;
+          @include link-hover();
         }
         gap: 15px;
       }
@@ -365,6 +429,7 @@ footer {
           @include link();
           color: gray;
           margin: 10px;
+          @include link-hover();
         }
       }
     }
@@ -392,7 +457,7 @@ footer {
       .news-group {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        grid-template-areas: "news news2";
+        grid-template-areas: "news1 news2";
         .news3 {
           display: none;
         }
@@ -466,6 +531,7 @@ footer {
                 height: 24px;
                 width: 24px;
                 svg {
+                  @include svg-hover();
                   fill: white;
                 }
               }
@@ -473,7 +539,7 @@ footer {
             .sign {
               @include button-style();
               background-color: #38383a;
-
+              @include borderhover();
               span {
                 color: white;
               }
@@ -533,9 +599,6 @@ footer {
         width: 60%;
       }
     }
-    .news {
-      padding: 20px;
-    }
     .info {
       padding: 20px;
       .info1,
@@ -566,8 +629,6 @@ footer {
   }
   .footer-bottom {
     justify-content: space-between;
-    .legal {
-    }
   }
 }
 @media (max-width: 837px) {
@@ -576,7 +637,7 @@ footer {
       .news-group {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        grid-template-areas: "news";
+        grid-template-areas: "news1";
         .news3 {
           display: none;
         }
