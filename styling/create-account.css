@@ -87,12 +87,13 @@ main .registration form .field .password-wrap input {
   flex: 1;
 }
 main .registration form .checkboxes {
+  flex-direction: column;
   align-items: flex-start;
   gap: 10px;
   color: white;
   font-size: 14px;
 }
-main .registration form .checkboxes .optional {
+main .registration form .checkboxes label div .optional {
   color: gray;
 }
 main .registration .name-fields {

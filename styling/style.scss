@@ -83,6 +83,9 @@ body {
   background-color: transparent;
   border: none;
 }
+html {
+  scroll-behavior: smooth;
+}
 header {
   background-color: #202029;
   padding: 20px;
@@ -242,12 +245,13 @@ main {
         background-color: #232349;
         height: 30%;
         padding: 10px;
-
         P {
+          font-family: inter;
           color: white;
           line-height: 1.4;
         }
         h4 {
+          font-family: inter;
           color: white;
           line-height: 1;
         }
@@ -364,9 +368,11 @@ footer {
   }
   .footer-platforms {
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 30px;
     .platform-icons {
+      justify-content: center;
+      align-items: center;
       gap: 10px;
       a {
         display: block;
@@ -410,6 +416,7 @@ footer {
       }
       .legal-links {
         flex-wrap: wrap;
+        align-items: center;
         a {
           @include link();
           color: gray;
@@ -419,6 +426,7 @@ footer {
       }
     }
     .back-top {
+      align-self: center;
       background-color: #38383a;
       border: none;
       border-radius: 15px;
@@ -618,17 +626,17 @@ footer {
 @media (max-width: 900px) {
   footer {
     padding: 20px;
-  }
 
-  .footer-top,
-  .footer-platforms,
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-  }
-  .footer-bottom {
-    justify-content: space-between;
+    .footer-top,
+    .footer-platforms,
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+    .footer-bottom {
+      justify-content: space-between;
+    }
   }
 }
 @media (max-width: 837px) {
@@ -647,14 +655,30 @@ footer {
       }
     }
   }
+  footer {
+    .footer-bottom {
+      .legal-links {
+        justify-content: center;
+      }
+    }
+  }
 }
 @media (max-width: 678px) {
   #info-headline {
     text-align: center;
   }
+  footer {
+      .footer-platforms {
+        align-items: center;
+        justify-content: center;
+      }
+  }
 }
 @media (max-width: 359px) {
   .buttons {
     flex-direction: column;
+  }
+  #patchnote {
+    font-size: 12px;
   }
 }

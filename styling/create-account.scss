@@ -83,12 +83,17 @@ main {
         }
       }
       .checkboxes {
+        flex-direction: column;
         align-items: flex-start;
         gap: 10px;
         color: white;
         font-size: 14px;
-        .optional {
-          color: gray;
+        label {
+          div {
+            .optional {
+              color: gray;
+            }
+          }
         }
       }
     }

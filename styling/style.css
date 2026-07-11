@@ -51,6 +51,10 @@ body {
   border: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   background-color: #202029;
   padding: 20px;
@@ -243,10 +247,12 @@ main .News .news-group .under-pic {
   padding: 10px;
 }
 main .News .news-group .under-pic P {
+  font-family: inter;
   color: white;
   line-height: 1.4;
 }
 main .News .news-group .under-pic h4 {
+  font-family: inter;
   color: white;
   line-height: 1;
 }
@@ -410,10 +416,12 @@ footer .footer-links .footer-support h3 {
 }
 footer .footer-platforms {
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 30px;
 }
 footer .footer-platforms .platform-icons {
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 footer .footer-platforms .platform-icons a {
@@ -464,6 +472,7 @@ footer .footer-bottom .legal p {
 }
 footer .footer-bottom .legal .legal-links {
   flex-wrap: wrap;
+  align-items: center;
 }
 footer .footer-bottom .legal .legal-links a {
   color: white;
@@ -478,6 +487,7 @@ footer .footer-bottom .legal .legal-links {
   gap: 15px;
 }
 footer .footer-bottom .back-top {
+  align-self: center;
   background-color: #38383a;
   border: none;
   border-radius: 15px;
@@ -677,14 +687,14 @@ footer .footer-bottom .back-top span a:hover {
   footer {
     padding: 20px;
   }
-  .footer-top,
-  .footer-platforms,
-  .footer-bottom {
+  footer .footer-top,
+  footer .footer-platforms,
+  footer .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
   }
-  .footer-bottom {
+  footer .footer-bottom {
     justify-content: space-between;
   }
 }
@@ -700,14 +710,24 @@ footer .footer-bottom .back-top span a:hover {
   main .News .news-group .news2 {
     display: none;
   }
+  footer .footer-bottom .legal-links {
+    justify-content: center;
+  }
 }
 @media (max-width: 678px) {
   #info-headline {
     text-align: center;
   }
+  footer .footer-platforms {
+    align-items: center;
+    justify-content: center;
+  }
 }
 @media (max-width: 359px) {
   .buttons {
     flex-direction: column;
+  }
+  #patchnote {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.css.map */
