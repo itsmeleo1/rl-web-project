@@ -226,12 +226,30 @@ main {
       grid-template-areas: "news1 news2 news3";
       .news1 {
         grid-area: news1;
+        &:hover {
+          outline: 2px solid rgb(150, 147, 147);
+          outline-offset: 2px;
+          transition: outline-color 0.2s ease;
+          cursor: pointer;
+        }
       }
       .news2 {
         grid-area: news2;
+        &:hover {
+          outline: 2px solid rgb(150, 147, 147);
+          outline-offset: 2px;
+          transition: outline-color 0.2s ease;
+          cursor: pointer;
+        }
       }
       .news3 {
         grid-area: news3;
+        &:hover {
+          outline: 2px solid rgb(150, 147, 147);
+          outline-offset: 2px;
+          transition: outline-color 0.2s ease;
+          cursor: pointer;
+        }
       }
       .news-pic {
         height: 70%;
@@ -668,10 +686,10 @@ footer {
     text-align: center;
   }
   footer {
-      .footer-platforms {
-        align-items: center;
-        justify-content: center;
-      }
+    .footer-platforms {
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 @media (max-width: 359px) {

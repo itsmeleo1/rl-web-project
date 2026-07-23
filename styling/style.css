@@ -226,11 +226,29 @@ main .News .news-group {
 main .News .news-group .news1 {
   grid-area: news1;
 }
+main .News .news-group .news1:hover {
+  outline: 2px solid rgb(150, 147, 147);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
+  cursor: pointer;
+}
 main .News .news-group .news2 {
   grid-area: news2;
 }
+main .News .news-group .news2:hover {
+  outline: 2px solid rgb(150, 147, 147);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
+  cursor: pointer;
+}
 main .News .news-group .news3 {
   grid-area: news3;
+}
+main .News .news-group .news3:hover {
+  outline: 2px solid rgb(150, 147, 147);
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
+  cursor: pointer;
 }
 main .News .news-group .news-pic {
   height: 70%;

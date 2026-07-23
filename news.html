@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rocket League</title>
+    <title>News</title>
     <link rel="stylesheet" href="./styling/reset.css">
-    <link rel="stylesheet" href="./styling/style.css">
-
+    <link rel="stylesheet" href="./styling/news.css">
 </head>
 
 <body>
@@ -67,7 +66,7 @@
                 </div>
                 <div class="menu-links">
                     <a href="./season23.html">Season 23</a>
-                    <a href="./news.html">News</a>
+                    <a href="#">News</a>
                     <a href="#">Competitive</a>
                     <a href="#">Stats API</a>
                     <a href="#">Support</a>
@@ -113,88 +112,138 @@
         </button>
     </header>
     <main>
-        <section class="flex gameplay-intro">
-            <div class="transparent-text flex">
-                <div class="season23">
-                    <img src="./img/RLU59_S23_SeasonLogo_Loc_EN.webp" alt="rocket league s23">
-                </div>
-                <div class="pitch flex">
-                    <span>Hit the Pitch for the World Cup in Rocket League Season 23!</span>
-                </div>
-                <div class="buttons flex">
-                    <button class="learn"><span>LEARN MORE</span></button>
-                    <button class="trailer"><span>WATCH TRAILER</span></button>
+        <section class="news-hero">
+            <div class="overlay"></div>
+
+            <div class="top">
+                <h2>ROCKET LEAGUE NEWS</h2>
+
+                <div class="filters">
+                    <button>All</button>
+                    <button>Competitive</button>
+                    <button>Patch Notes</button>
                 </div>
             </div>
-            <div class="gameplay">
-                <video autoplay muted loop src="./video/gameplay.mp4"></video>
+
+            <div class="hero-content">
+
+                <div class="hero-text flex">
+                    <span>JUN 05, 2026</span>
+
+                    <h1>
+                        HIT THE PITCH FOR THE
+                        WORLD CUP IN ROCKET
+                        LEAGUE SEASON 23!
+                    </h1>
+
+                    <a href="#">READ MORE</a>
+                </div>
+
+                <div class="hero-image">
+                    <img src="./img/info1.png" alt="">
+                </div>
+
             </div>
+
         </section>
-        <section class="News flex">
-            <div class="news-headline flex">
-                <p>NEWS</p>
-            </div>
-            <div class="news-group">
-                <div class="news1">
-                    <div class="news-pic">
-                        <img src="./img/news1.svg" alt="patch notes">
+        <section class="recent-news">
+            <h1>Recent News</h1>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img/info1.png" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUL 21, 2026</span>
+                        <p class="news-card__title">Season 24 update brings a new arena and ranked reset</p>
                     </div>
-                    <div class="under-pic">
-                        <p>JUN 09,2026</p>
-                        <h4 id="patchnote">ROCKET LEAGUE PATCH NOTES V2.70: SEASON 23 LIVE</h4>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img/info2.png" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUL 18, 2026</span>
+                        <p class="news-card__title">World championship bracket set for august</p>
                     </div>
-                </div>
-                <div class="news2">
-                    <div class="news-pic">
-                        <img src="./img/news2.svg" alt="hit the pitch s23">
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/third image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUL 15, 2026</span>
+                        <p class="news-card__title">Fan-made arena concepts we loved this month</p>
                     </div>
-                    <div class="under-pic">
-                        <p>JUN 05,2026</p>
-                        <h4>HIT THE PITCH FOR THE WORLD IN ROCKET LEAGUE SEASON 23!</h4>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/fourth image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUL 12, 2026</span>
+                        <p class="news-card__title">Double xp weekend returns this friday</p>
                     </div>
-                </div>
-                <div class="news3">
-                    <div class="news-pic"><img src="./img/news3.svg" alt="karmine corp lifting trophy"></div>
-                    <div class="under-pic">
-                        <p>MAY 24,2026</p>
-                        <h4>KARMINE CORP CLINCH THE WIN FOR A HOME CROWD AT THE ROCKET LEAGUE PARIS MAJOR</h4>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/seventh image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUL 09, 2026</span>
+                        <p class="news-card__title">Minor update fixes camera bug in freeplay</p>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="info flex">
-            <div class="info-headline flex">
-                <h1 id="info-headline">THIS IS ROCKET LEAGUE!</h1>
-                <p>Welcome to the high-powered hybrid of arcade-style soccer and vehicular mayhem</p>
-                <p>Customize your car, hit the field, and compete in one of the most critically acclaimed sports games of all time!</p>
-            </div>
-            <div class="info1 flex">
-                <div class="info-text flex">
-                    <h2>Season 23</h2>
-                    <p>The world's biggest tournament is coming to the world's biggest soccar pitch. Rocket League Season 23 kicks off June 10 at 9 AM PT, bringing the FIFA World Cup to the field.</p>
-                    <button class="learn"><span>LEARN MORE</span></button>
-                </div>
-                <div class="info-pic">
-                    <img src="./img/info1.png" alt="Rocket league s23">
-                </div>
-            </div>
-            <div class="info2 flex">
-                <div class="info-text flex">
-                    <h2>Rocket Rundown</h2>
-                    <p>Celebrate your Rocket League Season 22 highlights!</p>
-                    <button class="sign"><span>SIGN IN</span></button>
-                </div>
-                <div class="info-pic">
-                    <img src="./img/info2.png" alt="ROCKET RUNDOWN">
-                </div>
-            </div>
-            <div class="info3 flex">
-                <div class="info-text flex">
-                    <h2>Player Profile</h2>
-                    <p>Access your player profile by logging in with your Epic Games account, then see your Rocket League career in online play summarized.</p>
-                    <button class="sign"><span>SIGN IN</span></button>
-                </div>
-                <div class="info-pic"><img src="./img/info3.png" alt="PROFILE CUSTOMISATION"></div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/fifth image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUL 06, 2026</span>
+                        <p class="news-card__title">Regional qualifiers wrap up across three regions</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/fourth image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUL 02, 2026</span>
+                        <p class="news-card__title">Community spotlight: best goals of the week</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/ninth image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUN 28, 2026</span>
+                        <p class="news-card__title">New limited-time mode joins the playlist rotation</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/third image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUN 24, 2026</span>
+                        <p class="news-card__title">Anti-cheat improvements roll out on pc</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/second image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUN 20, 2026</span>
+                        <p class="news-card__title">Crossover event brings new items to the item shop</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/first image.png" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUN 16, 2026</span>
+                        <p class="news-card__title">Behind the scenes: designing the new arena</p>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-card__image"><img src="./img2/fourth image.jpg" alt=""></div>
+                    <div class="news-card__caption">
+                        <span class="news-card__date">JUN 12, 2026</span>
+                        <p class="news-card__title">Patch notes v2.71: season 23 wrap-up</p>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -362,7 +411,6 @@
             </button>
         </section>
     </footer>
-    <script src="./script.js"></script>
 </body>
 
 </html>
